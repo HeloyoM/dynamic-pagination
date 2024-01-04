@@ -1,18 +1,22 @@
 import Pagination from './pagination'
 
-const initialization = { displayList: [], currentPage: 0, filteredList: [] }
+const initialization = { displayList: [], currentPage: 0 }
 
 class Main {
     constructor() {
         this.paginateInc = new Pagination(initialization)
     }
 
-    init() {
-        this.paginateInc.getList()
+    async init() {
+        await this.paginateInc.getList()
     }
 
-    paginate() {
-        this.paginateInc.paginate()
+    async paginate() {
+        return await this.paginateInc.paginate()
+    }
+
+    getDisplayList() {
+        return this.paginateInc.getDisplayList()
     }
 }
 

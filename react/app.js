@@ -3,20 +3,38 @@ import Main from '../main'
 
 class App extends React.Component {
 
-    constructor() {
-        super()
-        this.mainIc = new Main()
+    state = {
+        displayList: [],
+        mainIc: new Main()
     }
 
-    onClick = () => {
-        this.mainIc.init()
+    async componentDidMount() {
+        await this.state.mainIc.init()
+        console.log(this.state.mainIc.getDisplayList())
+        this.setState({ displayList: this.state.mainIc.getDisplayList() })
+    }
+
+    onClick = async () => {
+        const nextSlice = await this.state.mainIc.paginate()
+
+        this.setState({ displayList: nextSlice })
     }
 
     render() {
         return (
-            <div>
-                <button onClick={this.onClick}>Triggered</button>
-            </div>
+            <React.Fragment>
+                <div>
+                    <button onClick={this.onClick}>Triggered</button>
+                </div>
+
+
+                {!!this.state.displayList.length && this.state.displayList.map(e => (
+                    <div key={e.id}>
+                        <p>Full name: {e.name}</p>
+                    </div>
+                ))}
+            </React.Fragment>
+
         )
     }
 
