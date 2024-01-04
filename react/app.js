@@ -5,43 +5,88 @@ class App extends React.Component {
 
     state = {
         displayList: [],
-        mainIc: new Main()
+        mainIc: new Main(),
+        pageSize: 0,
+        end: false
     }
 
     async componentDidMount() {
         await this.state.mainIc.init()
-        console.log(this.state.mainIc.getDisplayList())
+
         this.setState({ displayList: this.state.mainIc.getDisplayList() })
+
+        this.setState({ pageSize: this.state.displayList.length })
     }
 
     onClick = async () => {
         const nextSlice = await this.state.mainIc.paginate()
+        
+        if (nextSlice.length === this.state.displayList.length)
+            this.setState({ end: true })
 
-        this.setState({ displayList: nextSlice })
+        else this.setState({ displayList: nextSlice })
     }
 
     render() {
         return (
-            <React.Fragment>
-                <div>
-                    <button onClick={this.onClick}>Triggered</button>
+            <div style={styles.container}>
+
+                <List displayList={this.state.displayList} />
+
+                <div style={styles.list}>
+                    <button style={styles.btn} onClick={this.onClick}>Show more</button>
+
+                    <p>display each time {this.state.pageSize} of items</p>
+
+                    {this.state.end && <strong>end</strong>}
                 </div>
 
-
-                {!!this.state.displayList.length && this.state.displayList.map(e => (
-                    <div key={e.id}>
-                        <p>Full name: {e.name}</p>
-                    </div>
-                ))}
-            </React.Fragment>
-
+            </div>
         )
     }
-
 }
 
+const List = ({ displayList }) => {
+
+    return (
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
+            {displayList.length && displayList.map((item, index) => (
+                <div key={index}>
+                    {Object.entries(item).map(([key, value]) => {
+                        if (typeof value !== 'object') {
+                            return (<p key={key} >
+                                <strong>{key}:</strong> {value}
+                            </p>)
+                        }
+                    })}
+                </div>
+            ))}
+        </div>
+    )
+}
+
+const styles = {
+    container: {
+        border: '2.5px solid lightgrey'
+    },
+    btn: {
+        outline: 'none',
+        backgroundColor: 'lightblue',
+        width: '150px',
+        height: '47px',
+        borderRadius: '8px',
+        border: 'none',
+        cursor: 'pointer'
+    },
+    list: {
+        display: 'flex',
+        justifyContent: 'center',
+        flexDirection: 'column',
+        alignItems: 'center',
+    }
+}
 const rootElement = document.getElementById('root')
-console.log(rootElement)
+
 if (rootElement) {
     ReactDOM.render(
         <React.StrictMode>
@@ -50,5 +95,5 @@ if (rootElement) {
         rootElement
     )
 } else {
-    console.error("Root element with id 'root' not found in the HTML file.")
+    console.error("Root element with [id='root'] not found in the HTML file.")
 }
