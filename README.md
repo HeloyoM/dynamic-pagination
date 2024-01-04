@@ -1,4 +1,4 @@
-<h4 align="center"> In software architecture principles there's one great principle called Independence </h4>
+<h3 align="center"> In software architecture principles there's one great principle called Independence </h3>
 
 <p align="center">Uncle bob said: "A good architecture must support:"</p>
 
