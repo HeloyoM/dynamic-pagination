@@ -9,4 +9,8 @@
   <p>I'v build an software, in JS, that can use in any js framework: (react, angular, veu etc.)</p>
   <p>Since the UI it's about details. I made it very flexable that can change queckliy the framework and use in another UI </p>
 </div>
+
+## architecture
+![Architecture](https://github.com/HeloyoM/dynamic-pagination/assets/57059886/a2f434fb-d364-4138-9328-de466c1bd797)
+
   
