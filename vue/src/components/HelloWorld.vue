@@ -1,0 +1,71 @@
+<template>
+  <div class="hello">
+    <h1>{{ msg }}</h1>
+
+    <div v-for="item in displayList" :key="item.id"
+      :style="{ border: '1px solid lightgrey', fontSize: '16px', margin: 'auto auto', width: '70%' }">
+      <p>{{ item }}</p>
+    </div>
+
+    <button @click="fetchNewItems">Fetch New Items</button>
+
+    <p v-if="end">End</p>
+  </div>
+</template>
+
+<script>
+import Main from '../utiles/main'
+
+
+export default {
+  name: 'HelloWorld',
+  props: {
+    msg: String
+  },
+  data() {
+    return {
+      mainInc: new Main(),
+      displayList: [],
+      end: false,
+    }
+  },
+  mounted() {
+    this.initMain()
+  },
+  methods: {
+    async initMain() {
+      await this.mainInc.init()
+
+      this.displayList = this.mainInc.getDisplayList()
+    },
+    async fetchNewItems() {
+      const nextSlice = await this.mainInc.paginate()
+
+      if (nextSlice.length === this.displayList.length)
+        this.end = true
+
+      else this.displayList = nextSlice
+    }
+  },
+}
+</script>
+
+<style scoped>
+h3 {
+  margin: 40px 0 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+a {
+  color: #42b983;
+}
+</style>
