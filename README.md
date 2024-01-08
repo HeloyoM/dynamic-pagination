@@ -11,6 +11,7 @@
 </div>
 
 ## architecture
-![Architecture](https://github.com/HeloyoM/dynamic-pagination/assets/57059886/172fcbc3-ebd4-4ecc-b2ab-a66bbd4aa951)
+![Architecture](https://github.com/HeloyoM/dynamic-pagination/assets/57059886/23eb9c8a-89ee-496c-b6c6-7d5d3a17648f)
+
 
   
