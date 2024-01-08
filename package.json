@@ -6,12 +6,18 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "start": "webpack serve"
+    "start": "webpack serve",
+    "ng": "ng",
+    "ng-start": "ng serve",
+    "ng-build":"ng build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@angular/core": "^17.0.8",
+    "@angular/platform-browser": "^17.0.8",
+    "@angular/router": "^17.0.8",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },

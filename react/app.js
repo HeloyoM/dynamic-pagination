@@ -20,7 +20,7 @@ class App extends React.Component {
 
     onClick = async () => {
         const nextSlice = await this.state.mainIc.paginate()
-        
+
         if (nextSlice.length === this.state.displayList.length)
             this.setState({ end: true })
 
@@ -49,7 +49,7 @@ class App extends React.Component {
 const List = ({ displayList }) => {
 
     return (
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
+        <div style={{ display: 'flex', textDecoration: 'underline', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
             {displayList.length && displayList.map((item, index) => (
                 <div key={index}>
                     {Object.entries(item).map(([key, value]) => {
