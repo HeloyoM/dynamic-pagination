@@ -11,7 +11,7 @@
 </div>
 
 ## video
-see video example at <a href="https://www.youtube.com/watch?v=v2xzfpor-bU">Youtube</a>
+see video example at <a href="https://youtu.be/DBL00KwVZd0">Youtube</a>
 
 ## architecture
 ![architecture](https://github.com/HeloyoM/dynamic-pagination/assets/57059886/7c2a4eb8-6585-418d-b533-8b7e5392427a)
