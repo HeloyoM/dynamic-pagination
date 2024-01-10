@@ -9,7 +9,9 @@
   <p>I'v build an software, in JS, that can use in any js framework: (react, angular, veu etc.)</p>
   <p>Since the UI it's about details. I made it very flexable that can change queckliy the framework and use in another UI </p>
 </div>
-
+## video
+see video example at <a href="https://www.youtube.com/watch?v=v2xzfpor-bU">Youtube</a>
+ 
 ## architecture
 ![architecture](https://github.com/HeloyoM/dynamic-pagination/assets/57059886/7c2a4eb8-6585-418d-b533-8b7e5392427a)
 
