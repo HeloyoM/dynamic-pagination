@@ -13,3 +13,13 @@
     width: 50%;
     margin: 1%;
 }
+
+.btn{
+    outline: none;
+    background-color: lightblue;
+    width: 150px;
+    height: 47px;
+    border-radius: 8px;
+    border: outset 5px seagreen;
+    cursor: pointer
+}

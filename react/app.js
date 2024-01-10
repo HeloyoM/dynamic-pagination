@@ -78,7 +78,7 @@ const styles = {
         width: '150px',
         height: '47px',
         borderRadius: '8px',
-        border: 'none',
+        border: 'outset 5px seagreen',
         cursor: 'pointer'
     },
     list: {

@@ -135,7 +135,7 @@
     <div class="right-side">
       <div *ngFor="let item of displayList" class="item">{{ item | json }}</div>
 
-      <button (click)="fetchMoreItems()">Fetch More Items</button>
+      <button (click)="fetchMoreItems()" class="btn">Show More</button>
 
       <p *ngIf="end">End</p>
 

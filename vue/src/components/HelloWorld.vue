@@ -3,12 +3,11 @@
     <h1>{{ msg }}</h1>
     <div :style="{ display: 'flex', alignItems: 'center', flexDirection: 'column' }">
       <div v-for="item in displayList" :key="item.id" class="item">
-        <p >{{ item }}</p>
+        <p>{{ item }}</p>
       </div>
     </div>
 
-
-    <button @click="fetchNewItems">Fetch New Items</button>
+    <button @click="fetchNewItems"  class="btn">Fetch New Items</button>
 
     <p v-if="end">End</p>
   </div>
@@ -66,6 +65,16 @@ export default {
   box-shadow: 0px 4px 6px 4px lightgrey;
   width: 50%;
   margin: 1%;
+}
+
+.btn {
+  outline: none;
+  background-color: lightblue;
+  width: 150px;
+  height: 47px;
+  border-radius: 8px;
+  border: outset 5px seagreen;
+  cursor: pointer
 }
 
 h3 {
