@@ -1,11 +1,12 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-
-    <div v-for="item in displayList" :key="item.id"
-      :style="{ border: '1px solid lightgrey', fontSize: '16px', margin: 'auto auto', width: '70%' }">
-      <p>{{ item }}</p>
+    <div :style="{ display: 'flex', alignItems: 'center', flexDirection: 'column' }">
+      <div v-for="item in displayList" :key="item.id" class="item">
+        <p >{{ item }}</p>
+      </div>
     </div>
+
 
     <button @click="fetchNewItems">Fetch New Items</button>
 
@@ -51,6 +52,22 @@ export default {
 </script>
 
 <style scoped>
+.item {
+  border: outset 13px saddlebrown;
+  min-width: 350px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: black;
+  font-family: Sora, sens-serif;
+  font-size: 17px;
+  background-color: lemonchiffon;
+  box-shadow: 0px 4px 6px 4px lightgrey;
+  width: 50%;
+  margin: 1%;
+}
+
 h3 {
   margin: 40px 0 0;
 }
