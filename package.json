@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
     "start:react": "webpack serve",
-    "start:angular": "ng serve",
+    "start:angular": "ng serve --open",
     "start:vue": "vue serve",
     "ng": "ng",
     "vue": "vue"

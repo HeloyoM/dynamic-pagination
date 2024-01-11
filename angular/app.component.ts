@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { RouterOutlet } from '@angular/router'
-import Main from '../../main'
+import Main from '../main'
 
 @Component({
   selector: 'app-root',
