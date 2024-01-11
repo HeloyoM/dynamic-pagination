@@ -213,8 +213,7 @@ import {
   performanceMarkFeature,
   platformCore,
   provideZoneChangeDetection,
-  publishDefaultGlobalUtils$1,
-  publishGlobalUtil,
+  provideZonelessChangeDetection,
   reflectComponentType,
   registerLocaleData,
   registerNgModuleType,
@@ -430,7 +429,7 @@ import {
   ɵɵtrustConstantResourceUrl,
   ɵɵvalidateIframeAttribute,
   ɵɵviewQuery
-} from "./chunk-KOXGXC6M.js";
+} from "./chunk-PUBBWM4G.js";
 export {
   ANIMATION_MODULE_TYPE,
   APP_BOOTSTRAP_LISTENER,
@@ -655,8 +654,7 @@ export {
   noSideEffects as ɵnoSideEffects,
   patchComponentDefWithScope as ɵpatchComponentDefWithScope,
   performanceMarkFeature as ɵperformanceMarkFeature,
-  publishDefaultGlobalUtils$1 as ɵpublishDefaultGlobalUtils,
-  publishGlobalUtil as ɵpublishGlobalUtil,
+  provideZonelessChangeDetection as ɵprovideZonelessChangeDetection,
   registerLocaleData as ɵregisterLocaleData,
   renderDeferBlockState as ɵrenderDeferBlockState,
   resetCompiledComponents as ɵresetCompiledComponents,

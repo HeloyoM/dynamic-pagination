@@ -58,9 +58,9 @@ import {
   ɵɵinject,
   ɵɵinjectAttribute,
   ɵɵstyleProp
-} from "./chunk-KOXGXC6M.js";
+} from "./chunk-PUBBWM4G.js";
 
-// node_modules/@angular/common/fesm2022/common.mjs
+// ../node_modules/@angular/common/fesm2022/common.mjs
 var _DOM = null;
 function getDOM() {
   return _DOM;
@@ -1912,9 +1912,7 @@ function parseCookieValue(cookieStr, name) {
 var WS_REGEXP = /\s+/;
 var EMPTY_ARRAY = [];
 var _NgClass = class _NgClass {
-  constructor(_iterableDiffers, _keyValueDiffers, _ngEl, _renderer) {
-    this._iterableDiffers = _iterableDiffers;
-    this._keyValueDiffers = _keyValueDiffers;
+  constructor(_ngEl, _renderer) {
     this._ngEl = _ngEl;
     this._renderer = _renderer;
     this.initialClasses = EMPTY_ARRAY;
@@ -2015,7 +2013,7 @@ var _NgClass = class _NgClass {
   }
 };
 _NgClass.ɵfac = function NgClass_Factory(t) {
-  return new (t || _NgClass)(ɵɵdirectiveInject(IterableDiffers), ɵɵdirectiveInject(KeyValueDiffers), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(Renderer2));
+  return new (t || _NgClass)(ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(Renderer2));
 };
 _NgClass.ɵdir = ɵɵdefineDirective({
   type: _NgClass,
@@ -2035,10 +2033,6 @@ var NgClass = _NgClass;
       standalone: true
     }]
   }], () => [{
-    type: IterableDiffers
-  }, {
-    type: KeyValueDiffers
-  }, {
     type: ElementRef
   }, {
     type: Renderer2
@@ -3643,13 +3637,13 @@ function isPlatformWorkerApp(platformId) {
 function isPlatformWorkerUi(platformId) {
   return platformId === PLATFORM_WORKER_UI_ID;
 }
-var VERSION = new Version("17.0.8");
+var VERSION = new Version("17.0.9");
 var _ViewportScroller = class _ViewportScroller {
 };
 _ViewportScroller.ɵprov = ɵɵdefineInjectable({
   token: _ViewportScroller,
   providedIn: "root",
-  factory: () => new BrowserViewportScroller(ɵɵinject(DOCUMENT), window)
+  factory: () => isPlatformBrowser(inject(PLATFORM_ID)) ? new BrowserViewportScroller(inject(DOCUMENT), window) : new NullViewportScroller()
 });
 var ViewportScroller = _ViewportScroller;
 var BrowserViewportScroller = class {
@@ -3676,20 +3670,14 @@ var BrowserViewportScroller = class {
    * @returns The position in screen coordinates.
    */
   getScrollPosition() {
-    if (this.supportsScrolling()) {
-      return [this.window.pageXOffset, this.window.pageYOffset];
-    } else {
-      return [0, 0];
-    }
+    return [this.window.scrollX, this.window.scrollY];
   }
   /**
    * Sets the scroll position.
    * @param position The new position in screen coordinates.
    */
   scrollToPosition(position) {
-    if (this.supportsScrolling()) {
-      this.window.scrollTo(position[0], position[1]);
-    }
+    this.window.scrollTo(position[0], position[1]);
   }
   /**
    * Scrolls to an element and attempts to focus the element.
@@ -3703,9 +3691,6 @@ var BrowserViewportScroller = class {
    * @see https://html.spec.whatwg.org/#scroll-to-fragid
    */
   scrollToAnchor(target) {
-    if (!this.supportsScrolling()) {
-      return;
-    }
     const elSelected = findAnchorFromDocument(this.document, target);
     if (elSelected) {
       this.scrollToElement(elSelected);
@@ -3716,9 +3701,7 @@ var BrowserViewportScroller = class {
    * Disables automatic scroll restoration provided by the browser.
    */
   setHistoryScrollRestoration(scrollRestoration) {
-    if (this.supportsScrolling()) {
-      this.window.history.scrollRestoration = scrollRestoration;
-    }
+    this.window.history.scrollRestoration = scrollRestoration;
   }
   /**
    * Scrolls to an element using the native offset and the specified offset set on this scroller.
@@ -3732,13 +3715,6 @@ var BrowserViewportScroller = class {
     const top = rect.top + this.window.pageYOffset;
     const offset = this.offset();
     this.window.scrollTo(left - offset[0], top - offset[1]);
-  }
-  supportsScrolling() {
-    try {
-      return !!this.window && !!this.window.scrollTo && "pageXOffset" in this.window;
-    } catch {
-      return false;
-    }
   }
 };
 function findAnchorFromDocument(document, target) {
@@ -4817,9 +4793,9 @@ export {
 
 @angular/common/fesm2022/common.mjs:
   (**
-   * @license Angular v17.0.8
+   * @license Angular v17.0.9
    * (c) 2010-2022 Google LLC. https://angular.io/
    * License: MIT
    *)
 */
-//# sourceMappingURL=chunk-2LUOTJJP.js.map
+//# sourceMappingURL=chunk-MWHXB3RO.js.map

@@ -50,7 +50,7 @@ var __async = (__this, __arguments, generator) => {
   });
 };
 
-// node_modules/@angular/core/fesm2022/primitives/signals.mjs
+// ../node_modules/@angular/core/fesm2022/primitives/signals.mjs
 function defaultEquals(a, b) {
   return Object.is(a, b);
 }
@@ -414,7 +414,7 @@ var WATCH_NODE = (() => {
   });
 })();
 
-// node_modules/tslib/tslib.es6.mjs
+// ../node_modules/tslib/tslib.es6.mjs
 var extendStatics = function(d, b) {
   extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
     d2.__proto__ = b2;
@@ -643,12 +643,12 @@ function __asyncValues(o) {
   }
 }
 
-// node_modules/rxjs/dist/esm5/internal/util/isFunction.js
+// ../node_modules/rxjs/dist/esm5/internal/util/isFunction.js
 function isFunction(value) {
   return typeof value === "function";
 }
 
-// node_modules/rxjs/dist/esm5/internal/util/createErrorClass.js
+// ../node_modules/rxjs/dist/esm5/internal/util/createErrorClass.js
 function createErrorClass(createImpl) {
   var _super = function(instance) {
     Error.call(instance);
@@ -660,7 +660,7 @@ function createErrorClass(createImpl) {
   return ctorFunc;
 }
 
-// node_modules/rxjs/dist/esm5/internal/util/UnsubscriptionError.js
+// ../node_modules/rxjs/dist/esm5/internal/util/UnsubscriptionError.js
 var UnsubscriptionError = createErrorClass(function(_super) {
   return function UnsubscriptionErrorImpl(errors) {
     _super(this);
@@ -672,7 +672,7 @@ var UnsubscriptionError = createErrorClass(function(_super) {
   };
 });
 
-// node_modules/rxjs/dist/esm5/internal/util/arrRemove.js
+// ../node_modules/rxjs/dist/esm5/internal/util/arrRemove.js
 function arrRemove(arr, item) {
   if (arr) {
     var index = arr.indexOf(item);
@@ -680,7 +680,7 @@ function arrRemove(arr, item) {
   }
 }
 
-// node_modules/rxjs/dist/esm5/internal/Subscription.js
+// ../node_modules/rxjs/dist/esm5/internal/Subscription.js
 var Subscription = function() {
   function Subscription2(initialTeardown) {
     this.initialTeardown = initialTeardown;
@@ -817,7 +817,7 @@ function execFinalizer(finalizer) {
   }
 }
 
-// node_modules/rxjs/dist/esm5/internal/config.js
+// ../node_modules/rxjs/dist/esm5/internal/config.js
 var config = {
   onUnhandledError: null,
   onStoppedNotification: null,
@@ -826,7 +826,7 @@ var config = {
   useDeprecatedNextContext: false
 };
 
-// node_modules/rxjs/dist/esm5/internal/scheduler/timeoutProvider.js
+// ../node_modules/rxjs/dist/esm5/internal/scheduler/timeoutProvider.js
 var timeoutProvider = {
   setTimeout: function(handler, timeout2) {
     var args = [];
@@ -846,7 +846,7 @@ var timeoutProvider = {
   delegate: void 0
 };
 
-// node_modules/rxjs/dist/esm5/internal/util/reportUnhandledError.js
+// ../node_modules/rxjs/dist/esm5/internal/util/reportUnhandledError.js
 function reportUnhandledError(err) {
   timeoutProvider.setTimeout(function() {
     var onUnhandledError = config.onUnhandledError;
@@ -858,11 +858,11 @@ function reportUnhandledError(err) {
   });
 }
 
-// node_modules/rxjs/dist/esm5/internal/util/noop.js
+// ../node_modules/rxjs/dist/esm5/internal/util/noop.js
 function noop() {
 }
 
-// node_modules/rxjs/dist/esm5/internal/NotificationFactories.js
+// ../node_modules/rxjs/dist/esm5/internal/NotificationFactories.js
 var COMPLETE_NOTIFICATION = function() {
   return createNotification("C", void 0, void 0);
 }();
@@ -880,7 +880,7 @@ function createNotification(kind, value, error) {
   };
 }
 
-// node_modules/rxjs/dist/esm5/internal/util/errorContext.js
+// ../node_modules/rxjs/dist/esm5/internal/util/errorContext.js
 var context = null;
 function errorContext(cb) {
   if (config.useDeprecatedSynchronousErrorHandling) {
@@ -907,7 +907,7 @@ function captureError(err) {
   }
 }
 
-// node_modules/rxjs/dist/esm5/internal/Subscriber.js
+// ../node_modules/rxjs/dist/esm5/internal/Subscriber.js
 var Subscriber = function(_super) {
   __extends(Subscriber2, _super);
   function Subscriber2(destination) {
@@ -1072,17 +1072,17 @@ var EMPTY_OBSERVER = {
   complete: noop
 };
 
-// node_modules/rxjs/dist/esm5/internal/symbol/observable.js
+// ../node_modules/rxjs/dist/esm5/internal/symbol/observable.js
 var observable = function() {
   return typeof Symbol === "function" && Symbol.observable || "@@observable";
 }();
 
-// node_modules/rxjs/dist/esm5/internal/util/identity.js
+// ../node_modules/rxjs/dist/esm5/internal/util/identity.js
 function identity(x) {
   return x;
 }
 
-// node_modules/rxjs/dist/esm5/internal/util/pipe.js
+// ../node_modules/rxjs/dist/esm5/internal/util/pipe.js
 function pipe() {
   var fns = [];
   for (var _i = 0; _i < arguments.length; _i++) {
@@ -1104,7 +1104,7 @@ function pipeFromArray(fns) {
   };
 }
 
-// node_modules/rxjs/dist/esm5/internal/Observable.js
+// ../node_modules/rxjs/dist/esm5/internal/Observable.js
 var Observable = function() {
   function Observable2(subscribe) {
     if (subscribe) {
@@ -1196,7 +1196,7 @@ function isSubscriber(value) {
   return value && value instanceof Subscriber || isObserver(value) && isSubscription(value);
 }
 
-// node_modules/rxjs/dist/esm5/internal/util/lift.js
+// ../node_modules/rxjs/dist/esm5/internal/util/lift.js
 function hasLift(source) {
   return isFunction(source === null || source === void 0 ? void 0 : source.lift);
 }
@@ -1215,7 +1215,7 @@ function operate(init) {
   };
 }
 
-// node_modules/rxjs/dist/esm5/internal/operators/OperatorSubscriber.js
+// ../node_modules/rxjs/dist/esm5/internal/operators/OperatorSubscriber.js
 function createOperatorSubscriber(destination, onNext, onComplete, onError, onFinalize) {
   return new OperatorSubscriber(destination, onNext, onComplete, onError, onFinalize);
 }
@@ -1263,7 +1263,7 @@ var OperatorSubscriber = function(_super) {
   return OperatorSubscriber2;
 }(Subscriber);
 
-// node_modules/rxjs/dist/esm5/internal/operators/refCount.js
+// ../node_modules/rxjs/dist/esm5/internal/operators/refCount.js
 function refCount() {
   return operate(function(source, subscriber) {
     var connection = null;
@@ -1288,7 +1288,7 @@ function refCount() {
   });
 }
 
-// node_modules/rxjs/dist/esm5/internal/observable/ConnectableObservable.js
+// ../node_modules/rxjs/dist/esm5/internal/observable/ConnectableObservable.js
 var ConnectableObservable = function(_super) {
   __extends(ConnectableObservable2, _super);
   function ConnectableObservable2(source, subjectFactory) {
@@ -1347,7 +1347,7 @@ var ConnectableObservable = function(_super) {
   return ConnectableObservable2;
 }(Observable);
 
-// node_modules/rxjs/dist/esm5/internal/scheduler/performanceTimestampProvider.js
+// ../node_modules/rxjs/dist/esm5/internal/scheduler/performanceTimestampProvider.js
 var performanceTimestampProvider = {
   now: function() {
     return (performanceTimestampProvider.delegate || performance).now();
@@ -1355,7 +1355,7 @@ var performanceTimestampProvider = {
   delegate: void 0
 };
 
-// node_modules/rxjs/dist/esm5/internal/scheduler/animationFrameProvider.js
+// ../node_modules/rxjs/dist/esm5/internal/scheduler/animationFrameProvider.js
 var animationFrameProvider = {
   schedule: function(callback) {
     var request = requestAnimationFrame;
@@ -1392,7 +1392,7 @@ var animationFrameProvider = {
   delegate: void 0
 };
 
-// node_modules/rxjs/dist/esm5/internal/observable/dom/animationFrames.js
+// ../node_modules/rxjs/dist/esm5/internal/observable/dom/animationFrames.js
 function animationFramesFactory(timestampProvider) {
   return new Observable(function(subscriber) {
     var provider = timestampProvider || performanceTimestampProvider;
@@ -1421,7 +1421,7 @@ function animationFramesFactory(timestampProvider) {
 }
 var DEFAULT_ANIMATION_FRAMES = animationFramesFactory();
 
-// node_modules/rxjs/dist/esm5/internal/util/ObjectUnsubscribedError.js
+// ../node_modules/rxjs/dist/esm5/internal/util/ObjectUnsubscribedError.js
 var ObjectUnsubscribedError = createErrorClass(function(_super) {
   return function ObjectUnsubscribedErrorImpl() {
     _super(this);
@@ -1430,7 +1430,7 @@ var ObjectUnsubscribedError = createErrorClass(function(_super) {
   };
 });
 
-// node_modules/rxjs/dist/esm5/internal/Subject.js
+// ../node_modules/rxjs/dist/esm5/internal/Subject.js
 var Subject = function(_super) {
   __extends(Subject2, _super);
   function Subject2() {
@@ -1587,7 +1587,7 @@ var AnonymousSubject = function(_super) {
   return AnonymousSubject2;
 }(Subject);
 
-// node_modules/rxjs/dist/esm5/internal/BehaviorSubject.js
+// ../node_modules/rxjs/dist/esm5/internal/BehaviorSubject.js
 var BehaviorSubject = function(_super) {
   __extends(BehaviorSubject2, _super);
   function BehaviorSubject2(_value) {
@@ -1621,7 +1621,7 @@ var BehaviorSubject = function(_super) {
   return BehaviorSubject2;
 }(Subject);
 
-// node_modules/rxjs/dist/esm5/internal/scheduler/dateTimestampProvider.js
+// ../node_modules/rxjs/dist/esm5/internal/scheduler/dateTimestampProvider.js
 var dateTimestampProvider = {
   now: function() {
     return (dateTimestampProvider.delegate || Date).now();
@@ -1629,7 +1629,7 @@ var dateTimestampProvider = {
   delegate: void 0
 };
 
-// node_modules/rxjs/dist/esm5/internal/ReplaySubject.js
+// ../node_modules/rxjs/dist/esm5/internal/ReplaySubject.js
 var ReplaySubject = function(_super) {
   __extends(ReplaySubject2, _super);
   function ReplaySubject2(_bufferSize, _windowTime, _timestampProvider) {
@@ -1690,7 +1690,7 @@ var ReplaySubject = function(_super) {
   return ReplaySubject2;
 }(Subject);
 
-// node_modules/rxjs/dist/esm5/internal/AsyncSubject.js
+// ../node_modules/rxjs/dist/esm5/internal/AsyncSubject.js
 var AsyncSubject = function(_super) {
   __extends(AsyncSubject2, _super);
   function AsyncSubject2() {
@@ -1726,7 +1726,7 @@ var AsyncSubject = function(_super) {
   return AsyncSubject2;
 }(Subject);
 
-// node_modules/rxjs/dist/esm5/internal/scheduler/Action.js
+// ../node_modules/rxjs/dist/esm5/internal/scheduler/Action.js
 var Action = function(_super) {
   __extends(Action2, _super);
   function Action2(scheduler, work) {
@@ -1741,7 +1741,7 @@ var Action = function(_super) {
   return Action2;
 }(Subscription);
 
-// node_modules/rxjs/dist/esm5/internal/scheduler/intervalProvider.js
+// ../node_modules/rxjs/dist/esm5/internal/scheduler/intervalProvider.js
 var intervalProvider = {
   setInterval: function(handler, timeout2) {
     var args = [];
@@ -1761,7 +1761,7 @@ var intervalProvider = {
   delegate: void 0
 };
 
-// node_modules/rxjs/dist/esm5/internal/scheduler/AsyncAction.js
+// ../node_modules/rxjs/dist/esm5/internal/scheduler/AsyncAction.js
 var AsyncAction = function(_super) {
   __extends(AsyncAction2, _super);
   function AsyncAction2(scheduler, work) {
@@ -1851,7 +1851,7 @@ var AsyncAction = function(_super) {
   return AsyncAction2;
 }(Action);
 
-// node_modules/rxjs/dist/esm5/internal/util/Immediate.js
+// ../node_modules/rxjs/dist/esm5/internal/util/Immediate.js
 var nextHandle = 1;
 var resolved;
 var activeHandles = {};
@@ -1879,7 +1879,7 @@ var Immediate = {
   }
 };
 
-// node_modules/rxjs/dist/esm5/internal/scheduler/immediateProvider.js
+// ../node_modules/rxjs/dist/esm5/internal/scheduler/immediateProvider.js
 var setImmediate = Immediate.setImmediate;
 var clearImmediate = Immediate.clearImmediate;
 var immediateProvider = {
@@ -1898,7 +1898,7 @@ var immediateProvider = {
   delegate: void 0
 };
 
-// node_modules/rxjs/dist/esm5/internal/scheduler/AsapAction.js
+// ../node_modules/rxjs/dist/esm5/internal/scheduler/AsapAction.js
 var AsapAction = function(_super) {
   __extends(AsapAction2, _super);
   function AsapAction2(scheduler, work) {
@@ -1937,7 +1937,7 @@ var AsapAction = function(_super) {
   return AsapAction2;
 }(AsyncAction);
 
-// node_modules/rxjs/dist/esm5/internal/Scheduler.js
+// ../node_modules/rxjs/dist/esm5/internal/Scheduler.js
 var Scheduler = function() {
   function Scheduler2(schedulerActionCtor, now) {
     if (now === void 0) {
@@ -1956,7 +1956,7 @@ var Scheduler = function() {
   return Scheduler2;
 }();
 
-// node_modules/rxjs/dist/esm5/internal/scheduler/AsyncScheduler.js
+// ../node_modules/rxjs/dist/esm5/internal/scheduler/AsyncScheduler.js
 var AsyncScheduler = function(_super) {
   __extends(AsyncScheduler2, _super);
   function AsyncScheduler2(SchedulerAction, now) {
@@ -1992,7 +1992,7 @@ var AsyncScheduler = function(_super) {
   return AsyncScheduler2;
 }(Scheduler);
 
-// node_modules/rxjs/dist/esm5/internal/scheduler/AsapScheduler.js
+// ../node_modules/rxjs/dist/esm5/internal/scheduler/AsapScheduler.js
 var AsapScheduler = function(_super) {
   __extends(AsapScheduler2, _super);
   function AsapScheduler2() {
@@ -2021,13 +2021,13 @@ var AsapScheduler = function(_super) {
   return AsapScheduler2;
 }(AsyncScheduler);
 
-// node_modules/rxjs/dist/esm5/internal/scheduler/asap.js
+// ../node_modules/rxjs/dist/esm5/internal/scheduler/asap.js
 var asapScheduler = new AsapScheduler(AsapAction);
 
-// node_modules/rxjs/dist/esm5/internal/scheduler/async.js
+// ../node_modules/rxjs/dist/esm5/internal/scheduler/async.js
 var asyncScheduler = new AsyncScheduler(AsyncAction);
 
-// node_modules/rxjs/dist/esm5/internal/scheduler/QueueAction.js
+// ../node_modules/rxjs/dist/esm5/internal/scheduler/QueueAction.js
 var QueueAction = function(_super) {
   __extends(QueueAction2, _super);
   function QueueAction2(scheduler, work) {
@@ -2064,7 +2064,7 @@ var QueueAction = function(_super) {
   return QueueAction2;
 }(AsyncAction);
 
-// node_modules/rxjs/dist/esm5/internal/scheduler/QueueScheduler.js
+// ../node_modules/rxjs/dist/esm5/internal/scheduler/QueueScheduler.js
 var QueueScheduler = function(_super) {
   __extends(QueueScheduler2, _super);
   function QueueScheduler2() {
@@ -2073,10 +2073,10 @@ var QueueScheduler = function(_super) {
   return QueueScheduler2;
 }(AsyncScheduler);
 
-// node_modules/rxjs/dist/esm5/internal/scheduler/queue.js
+// ../node_modules/rxjs/dist/esm5/internal/scheduler/queue.js
 var queueScheduler = new QueueScheduler(QueueAction);
 
-// node_modules/rxjs/dist/esm5/internal/scheduler/AnimationFrameAction.js
+// ../node_modules/rxjs/dist/esm5/internal/scheduler/AnimationFrameAction.js
 var AnimationFrameAction = function(_super) {
   __extends(AnimationFrameAction2, _super);
   function AnimationFrameAction2(scheduler, work) {
@@ -2115,7 +2115,7 @@ var AnimationFrameAction = function(_super) {
   return AnimationFrameAction2;
 }(AsyncAction);
 
-// node_modules/rxjs/dist/esm5/internal/scheduler/AnimationFrameScheduler.js
+// ../node_modules/rxjs/dist/esm5/internal/scheduler/AnimationFrameScheduler.js
 var AnimationFrameScheduler = function(_super) {
   __extends(AnimationFrameScheduler2, _super);
   function AnimationFrameScheduler2() {
@@ -2144,10 +2144,10 @@ var AnimationFrameScheduler = function(_super) {
   return AnimationFrameScheduler2;
 }(AsyncScheduler);
 
-// node_modules/rxjs/dist/esm5/internal/scheduler/animationFrame.js
+// ../node_modules/rxjs/dist/esm5/internal/scheduler/animationFrame.js
 var animationFrameScheduler = new AnimationFrameScheduler(AnimationFrameAction);
 
-// node_modules/rxjs/dist/esm5/internal/scheduler/VirtualTimeScheduler.js
+// ../node_modules/rxjs/dist/esm5/internal/scheduler/VirtualTimeScheduler.js
 var VirtualTimeScheduler = function(_super) {
   __extends(VirtualTimeScheduler2, _super);
   function VirtualTimeScheduler2(schedulerActionCtor, maxFrames) {
@@ -2255,17 +2255,17 @@ var VirtualAction = function(_super) {
   return VirtualAction2;
 }(AsyncAction);
 
-// node_modules/rxjs/dist/esm5/internal/observable/empty.js
+// ../node_modules/rxjs/dist/esm5/internal/observable/empty.js
 var EMPTY = new Observable(function(subscriber) {
   return subscriber.complete();
 });
 
-// node_modules/rxjs/dist/esm5/internal/util/isScheduler.js
+// ../node_modules/rxjs/dist/esm5/internal/util/isScheduler.js
 function isScheduler(value) {
   return value && isFunction(value.schedule);
 }
 
-// node_modules/rxjs/dist/esm5/internal/util/args.js
+// ../node_modules/rxjs/dist/esm5/internal/util/args.js
 function last(arr) {
   return arr[arr.length - 1];
 }
@@ -2276,32 +2276,32 @@ function popScheduler(args) {
   return isScheduler(last(args)) ? args.pop() : void 0;
 }
 
-// node_modules/rxjs/dist/esm5/internal/util/isArrayLike.js
+// ../node_modules/rxjs/dist/esm5/internal/util/isArrayLike.js
 var isArrayLike = function(x) {
   return x && typeof x.length === "number" && typeof x !== "function";
 };
 
-// node_modules/rxjs/dist/esm5/internal/util/isPromise.js
+// ../node_modules/rxjs/dist/esm5/internal/util/isPromise.js
 function isPromise(value) {
   return isFunction(value === null || value === void 0 ? void 0 : value.then);
 }
 
-// node_modules/rxjs/dist/esm5/internal/util/isInteropObservable.js
+// ../node_modules/rxjs/dist/esm5/internal/util/isInteropObservable.js
 function isInteropObservable(input) {
   return isFunction(input[observable]);
 }
 
-// node_modules/rxjs/dist/esm5/internal/util/isAsyncIterable.js
+// ../node_modules/rxjs/dist/esm5/internal/util/isAsyncIterable.js
 function isAsyncIterable(obj) {
   return Symbol.asyncIterator && isFunction(obj === null || obj === void 0 ? void 0 : obj[Symbol.asyncIterator]);
 }
 
-// node_modules/rxjs/dist/esm5/internal/util/throwUnobservableError.js
+// ../node_modules/rxjs/dist/esm5/internal/util/throwUnobservableError.js
 function createInvalidObservableTypeError(input) {
   return new TypeError("You provided " + (input !== null && typeof input === "object" ? "an invalid object" : "'" + input + "'") + " where a stream was expected. You can provide an Observable, Promise, ReadableStream, Array, AsyncIterable, or Iterable.");
 }
 
-// node_modules/rxjs/dist/esm5/internal/symbol/iterator.js
+// ../node_modules/rxjs/dist/esm5/internal/symbol/iterator.js
 function getSymbolIterator() {
   if (typeof Symbol !== "function" || !Symbol.iterator) {
     return "@@iterator";
@@ -2310,12 +2310,12 @@ function getSymbolIterator() {
 }
 var iterator = getSymbolIterator();
 
-// node_modules/rxjs/dist/esm5/internal/util/isIterable.js
+// ../node_modules/rxjs/dist/esm5/internal/util/isIterable.js
 function isIterable(input) {
   return isFunction(input === null || input === void 0 ? void 0 : input[iterator]);
 }
 
-// node_modules/rxjs/dist/esm5/internal/util/isReadableStreamLike.js
+// ../node_modules/rxjs/dist/esm5/internal/util/isReadableStreamLike.js
 function readableStreamLikeToAsyncGenerator(readableStream) {
   return __asyncGenerator(this, arguments, function readableStreamLikeToAsyncGenerator_1() {
     var reader, _a, value, done;
@@ -2360,7 +2360,7 @@ function isReadableStreamLike(obj) {
   return isFunction(obj === null || obj === void 0 ? void 0 : obj.getReader);
 }
 
-// node_modules/rxjs/dist/esm5/internal/observable/innerFrom.js
+// ../node_modules/rxjs/dist/esm5/internal/observable/innerFrom.js
 function innerFrom(input) {
   if (input instanceof Observable) {
     return input;
@@ -2505,7 +2505,7 @@ function process(asyncIterable, subscriber) {
   });
 }
 
-// node_modules/rxjs/dist/esm5/internal/util/executeSchedule.js
+// ../node_modules/rxjs/dist/esm5/internal/util/executeSchedule.js
 function executeSchedule(parentSubscription, scheduler, work, delay2, repeat2) {
   if (delay2 === void 0) {
     delay2 = 0;
@@ -2527,7 +2527,7 @@ function executeSchedule(parentSubscription, scheduler, work, delay2, repeat2) {
   }
 }
 
-// node_modules/rxjs/dist/esm5/internal/operators/observeOn.js
+// ../node_modules/rxjs/dist/esm5/internal/operators/observeOn.js
 function observeOn(scheduler, delay2) {
   if (delay2 === void 0) {
     delay2 = 0;
@@ -2549,7 +2549,7 @@ function observeOn(scheduler, delay2) {
   });
 }
 
-// node_modules/rxjs/dist/esm5/internal/operators/subscribeOn.js
+// ../node_modules/rxjs/dist/esm5/internal/operators/subscribeOn.js
 function subscribeOn(scheduler, delay2) {
   if (delay2 === void 0) {
     delay2 = 0;
@@ -2561,17 +2561,17 @@ function subscribeOn(scheduler, delay2) {
   });
 }
 
-// node_modules/rxjs/dist/esm5/internal/scheduled/scheduleObservable.js
+// ../node_modules/rxjs/dist/esm5/internal/scheduled/scheduleObservable.js
 function scheduleObservable(input, scheduler) {
   return innerFrom(input).pipe(subscribeOn(scheduler), observeOn(scheduler));
 }
 
-// node_modules/rxjs/dist/esm5/internal/scheduled/schedulePromise.js
+// ../node_modules/rxjs/dist/esm5/internal/scheduled/schedulePromise.js
 function schedulePromise(input, scheduler) {
   return innerFrom(input).pipe(subscribeOn(scheduler), observeOn(scheduler));
 }
 
-// node_modules/rxjs/dist/esm5/internal/scheduled/scheduleArray.js
+// ../node_modules/rxjs/dist/esm5/internal/scheduled/scheduleArray.js
 function scheduleArray(input, scheduler) {
   return new Observable(function(subscriber) {
     var i = 0;
@@ -2588,7 +2588,7 @@ function scheduleArray(input, scheduler) {
   });
 }
 
-// node_modules/rxjs/dist/esm5/internal/scheduled/scheduleIterable.js
+// ../node_modules/rxjs/dist/esm5/internal/scheduled/scheduleIterable.js
 function scheduleIterable(input, scheduler) {
   return new Observable(function(subscriber) {
     var iterator2;
@@ -2617,7 +2617,7 @@ function scheduleIterable(input, scheduler) {
   });
 }
 
-// node_modules/rxjs/dist/esm5/internal/scheduled/scheduleAsyncIterable.js
+// ../node_modules/rxjs/dist/esm5/internal/scheduled/scheduleAsyncIterable.js
 function scheduleAsyncIterable(input, scheduler) {
   if (!input) {
     throw new Error("Iterable cannot be null");
@@ -2638,12 +2638,12 @@ function scheduleAsyncIterable(input, scheduler) {
   });
 }
 
-// node_modules/rxjs/dist/esm5/internal/scheduled/scheduleReadableStreamLike.js
+// ../node_modules/rxjs/dist/esm5/internal/scheduled/scheduleReadableStreamLike.js
 function scheduleReadableStreamLike(input, scheduler) {
   return scheduleAsyncIterable(readableStreamLikeToAsyncGenerator(input), scheduler);
 }
 
-// node_modules/rxjs/dist/esm5/internal/scheduled/scheduled.js
+// ../node_modules/rxjs/dist/esm5/internal/scheduled/scheduled.js
 function scheduled(input, scheduler) {
   if (input != null) {
     if (isInteropObservable(input)) {
@@ -2668,12 +2668,12 @@ function scheduled(input, scheduler) {
   throw createInvalidObservableTypeError(input);
 }
 
-// node_modules/rxjs/dist/esm5/internal/observable/from.js
+// ../node_modules/rxjs/dist/esm5/internal/observable/from.js
 function from(input, scheduler) {
   return scheduler ? scheduled(input, scheduler) : innerFrom(input);
 }
 
-// node_modules/rxjs/dist/esm5/internal/observable/of.js
+// ../node_modules/rxjs/dist/esm5/internal/observable/of.js
 function of() {
   var args = [];
   for (var _i = 0; _i < arguments.length; _i++) {
@@ -2683,7 +2683,7 @@ function of() {
   return from(args, scheduler);
 }
 
-// node_modules/rxjs/dist/esm5/internal/observable/throwError.js
+// ../node_modules/rxjs/dist/esm5/internal/observable/throwError.js
 function throwError(errorOrErrorFactory, scheduler) {
   var errorFactory = isFunction(errorOrErrorFactory) ? errorOrErrorFactory : function() {
     return errorOrErrorFactory;
@@ -2696,7 +2696,7 @@ function throwError(errorOrErrorFactory, scheduler) {
   } : init);
 }
 
-// node_modules/rxjs/dist/esm5/internal/Notification.js
+// ../node_modules/rxjs/dist/esm5/internal/Notification.js
 var NotificationKind;
 (function(NotificationKind2) {
   NotificationKind2["NEXT"] = "N";
@@ -2752,12 +2752,12 @@ function observeNotification(notification, observer) {
   kind === "N" ? (_a = observer.next) === null || _a === void 0 ? void 0 : _a.call(observer, value) : kind === "E" ? (_b = observer.error) === null || _b === void 0 ? void 0 : _b.call(observer, error) : (_c = observer.complete) === null || _c === void 0 ? void 0 : _c.call(observer);
 }
 
-// node_modules/rxjs/dist/esm5/internal/util/isObservable.js
+// ../node_modules/rxjs/dist/esm5/internal/util/isObservable.js
 function isObservable(obj) {
   return !!obj && (obj instanceof Observable || isFunction(obj.lift) && isFunction(obj.subscribe));
 }
 
-// node_modules/rxjs/dist/esm5/internal/util/EmptyError.js
+// ../node_modules/rxjs/dist/esm5/internal/util/EmptyError.js
 var EmptyError = createErrorClass(function(_super) {
   return function EmptyErrorImpl() {
     _super(this);
@@ -2766,7 +2766,7 @@ var EmptyError = createErrorClass(function(_super) {
   };
 });
 
-// node_modules/rxjs/dist/esm5/internal/util/ArgumentOutOfRangeError.js
+// ../node_modules/rxjs/dist/esm5/internal/util/ArgumentOutOfRangeError.js
 var ArgumentOutOfRangeError = createErrorClass(function(_super) {
   return function ArgumentOutOfRangeErrorImpl() {
     _super(this);
@@ -2775,7 +2775,7 @@ var ArgumentOutOfRangeError = createErrorClass(function(_super) {
   };
 });
 
-// node_modules/rxjs/dist/esm5/internal/util/NotFoundError.js
+// ../node_modules/rxjs/dist/esm5/internal/util/NotFoundError.js
 var NotFoundError = createErrorClass(function(_super) {
   return function NotFoundErrorImpl(message) {
     _super(this);
@@ -2784,7 +2784,7 @@ var NotFoundError = createErrorClass(function(_super) {
   };
 });
 
-// node_modules/rxjs/dist/esm5/internal/util/SequenceError.js
+// ../node_modules/rxjs/dist/esm5/internal/util/SequenceError.js
 var SequenceError = createErrorClass(function(_super) {
   return function SequenceErrorImpl(message) {
     _super(this);
@@ -2793,7 +2793,7 @@ var SequenceError = createErrorClass(function(_super) {
   };
 });
 
-// node_modules/rxjs/dist/esm5/internal/operators/timeout.js
+// ../node_modules/rxjs/dist/esm5/internal/operators/timeout.js
 var TimeoutError = createErrorClass(function(_super) {
   return function TimeoutErrorImpl(info) {
     if (info === void 0) {
@@ -2806,7 +2806,7 @@ var TimeoutError = createErrorClass(function(_super) {
   };
 });
 
-// node_modules/rxjs/dist/esm5/internal/operators/map.js
+// ../node_modules/rxjs/dist/esm5/internal/operators/map.js
 function map(project, thisArg) {
   return operate(function(source, subscriber) {
     var index = 0;
@@ -2816,7 +2816,7 @@ function map(project, thisArg) {
   });
 }
 
-// node_modules/rxjs/dist/esm5/internal/util/mapOneOrManyArgs.js
+// ../node_modules/rxjs/dist/esm5/internal/util/mapOneOrManyArgs.js
 var isArray = Array.isArray;
 function callOrApply(fn, args) {
   return isArray(args) ? fn.apply(void 0, __spreadArray([], __read(args))) : fn(args);
@@ -2827,7 +2827,7 @@ function mapOneOrManyArgs(fn) {
   });
 }
 
-// node_modules/rxjs/dist/esm5/internal/util/argsArgArrayOrObject.js
+// ../node_modules/rxjs/dist/esm5/internal/util/argsArgArrayOrObject.js
 var isArray2 = Array.isArray;
 var getPrototypeOf = Object.getPrototypeOf;
 var objectProto = Object.prototype;
@@ -2854,14 +2854,14 @@ function isPOJO(obj) {
   return obj && typeof obj === "object" && getPrototypeOf(obj) === objectProto;
 }
 
-// node_modules/rxjs/dist/esm5/internal/util/createObject.js
+// ../node_modules/rxjs/dist/esm5/internal/util/createObject.js
 function createObject(keys, values) {
   return keys.reduce(function(result, key, i) {
     return result[key] = values[i], result;
   }, {});
 }
 
-// node_modules/rxjs/dist/esm5/internal/observable/combineLatest.js
+// ../node_modules/rxjs/dist/esm5/internal/observable/combineLatest.js
 function combineLatest() {
   var args = [];
   for (var _i = 0; _i < arguments.length; _i++) {
@@ -2922,7 +2922,7 @@ function maybeSchedule(scheduler, execute, subscription) {
   }
 }
 
-// node_modules/rxjs/dist/esm5/internal/operators/mergeInternals.js
+// ../node_modules/rxjs/dist/esm5/internal/operators/mergeInternals.js
 function mergeInternals(source, subscriber, project, concurrent, onBeforeNext, expand2, innerSubScheduler, additionalFinalizer) {
   var buffer2 = [];
   var active = 0;
@@ -2982,7 +2982,7 @@ function mergeInternals(source, subscriber, project, concurrent, onBeforeNext, e
   };
 }
 
-// node_modules/rxjs/dist/esm5/internal/operators/mergeMap.js
+// ../node_modules/rxjs/dist/esm5/internal/operators/mergeMap.js
 function mergeMap(project, resultSelector, concurrent) {
   if (concurrent === void 0) {
     concurrent = Infinity;
@@ -3001,7 +3001,7 @@ function mergeMap(project, resultSelector, concurrent) {
   });
 }
 
-// node_modules/rxjs/dist/esm5/internal/operators/mergeAll.js
+// ../node_modules/rxjs/dist/esm5/internal/operators/mergeAll.js
 function mergeAll(concurrent) {
   if (concurrent === void 0) {
     concurrent = Infinity;
@@ -3009,12 +3009,12 @@ function mergeAll(concurrent) {
   return mergeMap(identity, concurrent);
 }
 
-// node_modules/rxjs/dist/esm5/internal/operators/concatAll.js
+// ../node_modules/rxjs/dist/esm5/internal/operators/concatAll.js
 function concatAll() {
   return mergeAll(1);
 }
 
-// node_modules/rxjs/dist/esm5/internal/observable/concat.js
+// ../node_modules/rxjs/dist/esm5/internal/observable/concat.js
 function concat() {
   var args = [];
   for (var _i = 0; _i < arguments.length; _i++) {
@@ -3023,20 +3023,20 @@ function concat() {
   return concatAll()(from(args, popScheduler(args)));
 }
 
-// node_modules/rxjs/dist/esm5/internal/observable/defer.js
+// ../node_modules/rxjs/dist/esm5/internal/observable/defer.js
 function defer(observableFactory) {
   return new Observable(function(subscriber) {
     innerFrom(observableFactory()).subscribe(subscriber);
   });
 }
 
-// node_modules/rxjs/dist/esm5/internal/observable/never.js
+// ../node_modules/rxjs/dist/esm5/internal/observable/never.js
 var NEVER = new Observable(noop);
 
-// node_modules/rxjs/dist/esm5/internal/util/argsOrArgArray.js
+// ../node_modules/rxjs/dist/esm5/internal/util/argsOrArgArray.js
 var isArray3 = Array.isArray;
 
-// node_modules/rxjs/dist/esm5/internal/operators/filter.js
+// ../node_modules/rxjs/dist/esm5/internal/operators/filter.js
 function filter(predicate, thisArg) {
   return operate(function(source, subscriber) {
     var index = 0;
@@ -3046,7 +3046,7 @@ function filter(predicate, thisArg) {
   });
 }
 
-// node_modules/rxjs/dist/esm5/internal/operators/catchError.js
+// ../node_modules/rxjs/dist/esm5/internal/operators/catchError.js
 function catchError(selector) {
   return operate(function(source, subscriber) {
     var innerSub = null;
@@ -3070,7 +3070,7 @@ function catchError(selector) {
   });
 }
 
-// node_modules/rxjs/dist/esm5/internal/operators/scanInternals.js
+// ../node_modules/rxjs/dist/esm5/internal/operators/scanInternals.js
 function scanInternals(accumulator, seed, hasSeed, emitOnNext, emitBeforeComplete) {
   return function(source, subscriber) {
     var hasState = hasSeed;
@@ -3087,12 +3087,12 @@ function scanInternals(accumulator, seed, hasSeed, emitOnNext, emitBeforeComplet
   };
 }
 
-// node_modules/rxjs/dist/esm5/internal/operators/concatMap.js
+// ../node_modules/rxjs/dist/esm5/internal/operators/concatMap.js
 function concatMap(project, resultSelector) {
   return isFunction(resultSelector) ? mergeMap(project, resultSelector, 1) : mergeMap(project, 1);
 }
 
-// node_modules/rxjs/dist/esm5/internal/operators/defaultIfEmpty.js
+// ../node_modules/rxjs/dist/esm5/internal/operators/defaultIfEmpty.js
 function defaultIfEmpty(defaultValue) {
   return operate(function(source, subscriber) {
     var hasValue = false;
@@ -3108,7 +3108,7 @@ function defaultIfEmpty(defaultValue) {
   });
 }
 
-// node_modules/rxjs/dist/esm5/internal/operators/take.js
+// ../node_modules/rxjs/dist/esm5/internal/operators/take.js
 function take(count2) {
   return count2 <= 0 ? function() {
     return EMPTY;
@@ -3125,14 +3125,14 @@ function take(count2) {
   });
 }
 
-// node_modules/rxjs/dist/esm5/internal/operators/mapTo.js
+// ../node_modules/rxjs/dist/esm5/internal/operators/mapTo.js
 function mapTo(value) {
   return map(function() {
     return value;
   });
 }
 
-// node_modules/rxjs/dist/esm5/internal/operators/throwIfEmpty.js
+// ../node_modules/rxjs/dist/esm5/internal/operators/throwIfEmpty.js
 function throwIfEmpty(errorFactory) {
   if (errorFactory === void 0) {
     errorFactory = defaultErrorFactory;
@@ -3151,7 +3151,7 @@ function defaultErrorFactory() {
   return new EmptyError();
 }
 
-// node_modules/rxjs/dist/esm5/internal/operators/finalize.js
+// ../node_modules/rxjs/dist/esm5/internal/operators/finalize.js
 function finalize(callback) {
   return operate(function(source, subscriber) {
     try {
@@ -3162,7 +3162,7 @@ function finalize(callback) {
   });
 }
 
-// node_modules/rxjs/dist/esm5/internal/operators/first.js
+// ../node_modules/rxjs/dist/esm5/internal/operators/first.js
 function first(predicate, defaultValue) {
   var hasDefaultValue = arguments.length >= 2;
   return function(source) {
@@ -3174,7 +3174,7 @@ function first(predicate, defaultValue) {
   };
 }
 
-// node_modules/rxjs/dist/esm5/internal/operators/takeLast.js
+// ../node_modules/rxjs/dist/esm5/internal/operators/takeLast.js
 function takeLast(count2) {
   return count2 <= 0 ? function() {
     return EMPTY;
@@ -3208,7 +3208,7 @@ function takeLast(count2) {
   });
 }
 
-// node_modules/rxjs/dist/esm5/internal/operators/last.js
+// ../node_modules/rxjs/dist/esm5/internal/operators/last.js
 function last2(predicate, defaultValue) {
   var hasDefaultValue = arguments.length >= 2;
   return function(source) {
@@ -3220,12 +3220,12 @@ function last2(predicate, defaultValue) {
   };
 }
 
-// node_modules/rxjs/dist/esm5/internal/operators/scan.js
+// ../node_modules/rxjs/dist/esm5/internal/operators/scan.js
 function scan(accumulator, seed) {
   return operate(scanInternals(accumulator, seed, arguments.length >= 2, true));
 }
 
-// node_modules/rxjs/dist/esm5/internal/operators/startWith.js
+// ../node_modules/rxjs/dist/esm5/internal/operators/startWith.js
 function startWith() {
   var values = [];
   for (var _i = 0; _i < arguments.length; _i++) {
@@ -3237,7 +3237,7 @@ function startWith() {
   });
 }
 
-// node_modules/rxjs/dist/esm5/internal/operators/switchMap.js
+// ../node_modules/rxjs/dist/esm5/internal/operators/switchMap.js
 function switchMap(project, resultSelector) {
   return operate(function(source, subscriber) {
     var innerSubscriber = null;
@@ -3263,7 +3263,7 @@ function switchMap(project, resultSelector) {
   });
 }
 
-// node_modules/rxjs/dist/esm5/internal/operators/takeUntil.js
+// ../node_modules/rxjs/dist/esm5/internal/operators/takeUntil.js
 function takeUntil(notifier) {
   return operate(function(source, subscriber) {
     innerFrom(notifier).subscribe(createOperatorSubscriber(subscriber, function() {
@@ -3273,7 +3273,7 @@ function takeUntil(notifier) {
   });
 }
 
-// node_modules/rxjs/dist/esm5/internal/operators/tap.js
+// ../node_modules/rxjs/dist/esm5/internal/operators/tap.js
 function tap(observerOrNext, error, complete) {
   var tapObserver = isFunction(observerOrNext) || error || complete ? { next: observerOrNext, error, complete } : observerOrNext;
   return tapObserver ? operate(function(source, subscriber) {
@@ -3304,7 +3304,7 @@ function tap(observerOrNext, error, complete) {
   }) : identity;
 }
 
-// node_modules/rxjs/dist/esm5/internal/operators/timeInterval.js
+// ../node_modules/rxjs/dist/esm5/internal/operators/timeInterval.js
 var TimeInterval = function() {
   function TimeInterval2(value, interval2) {
     this.value = value;
@@ -3313,7 +3313,7 @@ var TimeInterval = function() {
   return TimeInterval2;
 }();
 
-// node_modules/@angular/core/fesm2022/core.mjs
+// ../node_modules/@angular/core/fesm2022/core.mjs
 function getClosureSafeProperty(objWithPropertyToExtract) {
   for (let key in objWithPropertyToExtract) {
     if (objWithPropertyToExtract[key] === getClosureSafeProperty) {
@@ -3456,8 +3456,8 @@ function throwInvalidProviderError(ngModuleType, providers, provider) {
   }
 }
 function throwProviderNotFoundError(token, injectorName) {
-  const injectorDetails = injectorName ? ` in ${injectorName}` : "";
-  throw new RuntimeError(-201, ngDevMode && `No provider for ${stringifyForError(token)} found${injectorDetails}`);
+  const errorMessage = ngDevMode && `No provider for ${stringifyForError(token)} found${injectorName ? ` in ${injectorName}` : ""}`;
+  throw new RuntimeError(-201, errorMessage);
 }
 function assertNumber(actual, msg) {
   if (!(typeof actual === "number")) {
@@ -3613,7 +3613,7 @@ function injectRootLimpMode(token, notFoundValue, flags) {
     return null;
   if (notFoundValue !== void 0)
     return notFoundValue;
-  throwProviderNotFoundError(stringify(token), "Injector");
+  throwProviderNotFoundError(token, "Injector");
 }
 function assertInjectImplementationNotEqual(fn) {
   ngDevMode && assertNotEqual(_injectImplementation, fn, "Calling ɵɵinject would cause infinite recursion");
@@ -4506,7 +4506,6 @@ var LContainerFlags;
 (function(LContainerFlags2) {
   LContainerFlags2[LContainerFlags2["None"] = 0] = "None";
   LContainerFlags2[LContainerFlags2["HasTransplantedViews"] = 2] = "HasTransplantedViews";
-  LContainerFlags2[LContainerFlags2["HasChildViewsToRefresh"] = 4] = "HasChildViewsToRefresh";
 })(LContainerFlags || (LContainerFlags = {}));
 function isLView(value) {
   return Array.isArray(value) && typeof value[TYPE] === "object";
@@ -4834,20 +4833,16 @@ function updateAncestorTraversalFlagsOnAttach(lView) {
 }
 function markAncestorsForTraversal(lView) {
   lView[ENVIRONMENT].changeDetectionScheduler?.notify();
-  let parent = lView[PARENT];
+  let parent = getLViewParent(lView);
   while (parent !== null) {
-    if (isLContainer(parent) && parent[FLAGS] & LContainerFlags.HasChildViewsToRefresh || isLView(parent) && parent[FLAGS] & 8192) {
+    if (parent[FLAGS] & 8192) {
       break;
     }
-    if (isLContainer(parent)) {
-      parent[FLAGS] |= LContainerFlags.HasChildViewsToRefresh;
-    } else {
-      parent[FLAGS] |= 8192;
-      if (!viewAttachedToChangeDetector(parent)) {
-        break;
-      }
+    parent[FLAGS] |= 8192;
+    if (!viewAttachedToChangeDetector(parent)) {
+      break;
     }
-    parent = parent[PARENT];
+    parent = getLViewParent(parent);
   }
 }
 function storeLViewOnDestroy(lView, onDestroyCallback) {
@@ -4866,6 +4861,11 @@ function removeLViewOnDestroy(lView, onDestroyCallback) {
   if (destroyCBIdx !== -1) {
     lView[ON_DESTROY_HOOKS].splice(destroyCBIdx, 1);
   }
+}
+function getLViewParent(lView) {
+  ngDevMode && assertLView(lView);
+  const parent = lView[PARENT];
+  return isLContainer(parent) ? parent[PARENT] : parent;
 }
 var instructionState = {
   lFrame: createLFrame(null),
@@ -5330,10 +5330,12 @@ function hasParentInjector(parentLocation) {
   return parentLocation !== NO_PARENT_INJECTOR;
 }
 function getParentInjectorIndex(parentLocation) {
-  ngDevMode && assertNumber(parentLocation, "Number expected");
-  ngDevMode && assertNotEqual(parentLocation, -1, "Not a valid state.");
-  const parentInjectorIndex = parentLocation & 32767;
-  ngDevMode && assertGreaterThan(parentInjectorIndex, HEADER_OFFSET, "Parent injector must be pointing past HEADER_OFFSET.");
+  if (ngDevMode) {
+    assertNumber(parentLocation, "Number expected");
+    assertNotEqual(parentLocation, -1, "Not a valid state.");
+    const parentInjectorIndex = parentLocation & 32767;
+    assertGreaterThan(parentInjectorIndex, HEADER_OFFSET, "Parent injector must be pointing past HEADER_OFFSET.");
+  }
   return parentLocation & 32767;
 }
 function getParentInjectorViewOffset(parentLocation) {
@@ -6801,9 +6803,11 @@ var R3Injector = class extends EnvironmentInjector {
       token = provider;
       multiRecord.multi.push(provider);
     } else {
-      const existing = this.records.get(token);
-      if (ngDevMode && existing && existing.multi !== void 0) {
-        throwMixedMultiProviderError();
+      if (ngDevMode) {
+        const existing = this.records.get(token);
+        if (existing && existing.multi !== void 0) {
+          throwMixedMultiProviderError();
+        }
       }
     }
     this.records.set(token, record);
@@ -6862,8 +6866,7 @@ function injectableDefOrInjectorDefFactory(token) {
 function getUndecoratedInjectableFactory(token) {
   const paramLength = token.length;
   if (paramLength > 0) {
-    const args = newArray(paramLength, "?");
-    throw new RuntimeError(204, ngDevMode && `Can't resolve all parameters for ${stringify(token)}: (${args.join(", ")}).`);
+    throw new RuntimeError(204, ngDevMode && `Can't resolve all parameters for ${stringify(token)}: (${newArray(paramLength, "?").join(", ")}).`);
   }
   const inheritedInjectableDef = getInheritedInjectableDef(token);
   if (inheritedInjectableDef !== null) {
@@ -7806,37 +7809,6 @@ function ensureIcuContainerVisitorLoaded(loader) {
     _icuContainerIterate = loader();
   }
 }
-function getLViewParent(lView) {
-  ngDevMode && assertLView(lView);
-  const parent = lView[PARENT];
-  return isLContainer(parent) ? parent[PARENT] : parent;
-}
-function getRootView(componentOrLView) {
-  ngDevMode && assertDefined(componentOrLView, "component");
-  let lView = isLView(componentOrLView) ? componentOrLView : readPatchedLView(componentOrLView);
-  while (lView && !(lView[FLAGS] & 512)) {
-    lView = getLViewParent(lView);
-  }
-  ngDevMode && assertLView(lView);
-  return lView;
-}
-function getRootContext(viewOrComponent) {
-  const rootView = getRootView(viewOrComponent);
-  ngDevMode && assertDefined(rootView[CONTEXT], "Root view has no context. Perhaps it is disconnected?");
-  return rootView[CONTEXT];
-}
-function getFirstLContainer(lView) {
-  return getNearestLContainer(lView[CHILD_HEAD]);
-}
-function getNextLContainer(container) {
-  return getNearestLContainer(container[NEXT]);
-}
-function getNearestLContainer(viewOrContainer) {
-  while (viewOrContainer !== null && !isLContainer(viewOrContainer)) {
-    viewOrContainer = viewOrContainer[NEXT];
-  }
-  return viewOrContainer;
-}
 function applyToElementOrContainer(action, renderer, parent, lNodeToHandle, beforeNode) {
   if (lNodeToHandle != null) {
     let lContainer;
@@ -7886,8 +7858,7 @@ function createElementNode(renderer, name, namespace) {
   return renderer.createElement(name, namespace);
 }
 function removeViewFromDOM(tView, lView) {
-  const renderer = lView[RENDERER];
-  applyView(tView, lView, renderer, 2, null, null);
+  detachViewFromDOM(tView, lView);
   lView[HOST] = null;
   lView[T_HOST] = null;
 }
@@ -7897,6 +7868,7 @@ function addViewToDOM(tView, parentTNode, renderer, lView, parentNativeNode, bef
   applyView(tView, lView, renderer, 1, parentNativeNode, beforeNode);
 }
 function detachViewFromDOM(tView, lView) {
+  lView[ENVIRONMENT].changeDetectionScheduler?.notify();
   applyView(tView, lView, lView[RENDERER], 2, null, null);
 }
 function destroyViewTree(rootView) {
@@ -7982,8 +7954,7 @@ function detachMovedView(declarationContainer, lView) {
   ngDevMode && assertDefined(declarationContainer[MOVED_VIEWS], "A projected view should belong to a non-empty projected views collection");
   const movedViews = declarationContainer[MOVED_VIEWS];
   const declarationViewIndex = movedViews.indexOf(lView);
-  const insertionLContainer = lView[PARENT];
-  ngDevMode && assertLContainer(insertionLContainer);
+  ngDevMode && assertLContainer(lView[PARENT]);
   movedViews.splice(declarationViewIndex, 1);
 }
 function detachView(lContainer, removeIndex) {
@@ -8962,7 +8933,7 @@ var TRANSFER_STATE_TOKEN_ID = "__nghData__";
 var NGH_DATA_KEY = makeStateKey(TRANSFER_STATE_TOKEN_ID);
 var NGH_ATTR_NAME = "ngh";
 var SSR_CONTENT_INTEGRITY_MARKER = "nghm";
-var _retrieveHydrationInfoImpl = (rNode, injector, isRootView2) => null;
+var _retrieveHydrationInfoImpl = () => null;
 function retrieveHydrationInfoImpl(rNode, injector, isRootView2 = false) {
   let nghAttrValue = rNode.getAttribute(NGH_ATTR_NAME);
   if (nghAttrValue == null)
@@ -10200,6 +10171,32 @@ var REACTIVE_LVIEW_CONSUMER_NODE = __spreadProps(__spreadValues({}, REACTIVE_NOD
     this.lView[REACTIVE_TEMPLATE_CONSUMER] = this;
   }
 });
+function getRootView(componentOrLView) {
+  ngDevMode && assertDefined(componentOrLView, "component");
+  let lView = isLView(componentOrLView) ? componentOrLView : readPatchedLView(componentOrLView);
+  while (lView && !(lView[FLAGS] & 512)) {
+    lView = getLViewParent(lView);
+  }
+  ngDevMode && assertLView(lView);
+  return lView;
+}
+function getRootContext(viewOrComponent) {
+  const rootView = getRootView(viewOrComponent);
+  ngDevMode && assertDefined(rootView[CONTEXT], "Root view has no context. Perhaps it is disconnected?");
+  return rootView[CONTEXT];
+}
+function getFirstLContainer(lView) {
+  return getNearestLContainer(lView[CHILD_HEAD]);
+}
+function getNextLContainer(container) {
+  return getNearestLContainer(container[NEXT]);
+}
+function getNearestLContainer(viewOrContainer) {
+  while (viewOrContainer !== null && !isLContainer(viewOrContainer)) {
+    viewOrContainer = viewOrContainer[NEXT];
+  }
+  return viewOrContainer;
+}
 var ERROR_ORIGINAL_ERROR = "ngOriginalError";
 function getOriginalError(error) {
   return error[ERROR_ORIGINAL_ERROR];
@@ -10323,7 +10320,7 @@ function getExpressionChangedErrorDetails(lView, bindingIndex, oldValue, newValu
   return { propName: void 0, oldValue, newValue };
 }
 var NO_CHANGE = typeof ngDevMode === "undefined" || ngDevMode ? { __brand__: "NO_CHANGE" } : {};
-function ɵɵadvance(delta) {
+function ɵɵadvance(delta = 1) {
   ngDevMode && assertGreaterThan(delta, 0, "Can only advance forward");
   selectIndexInternal(getTView(), getLView(), getSelectedIndex() + delta, !!ngDevMode && isInCheckNoChangesMode());
 }
@@ -10591,7 +10588,7 @@ function locateHostElement(renderer, elementOrSelector, encapsulation, injector)
 function applyRootElementTransform(rootElement) {
   _applyRootElementTransformImpl(rootElement);
 }
-var _applyRootElementTransformImpl = (rootElement) => null;
+var _applyRootElementTransformImpl = () => null;
 function applyRootElementTransformImpl(rootElement) {
   if (hasSkipHydrationAttrOnRElement(rootElement)) {
     clearElementContents(rootElement);
@@ -11222,11 +11219,9 @@ var MAXIMUM_REFRESH_RERUNS = 100;
 function detectChangesInternal(lView, notifyErrorHandler = true) {
   const environment = lView[ENVIRONMENT];
   const rendererFactory = environment.rendererFactory;
-  const afterRenderEventManager = environment.afterRenderEventManager;
   const checkNoChangesMode = !!ngDevMode && isInCheckNoChangesMode();
   if (!checkNoChangesMode) {
     rendererFactory.begin?.();
-    afterRenderEventManager?.begin();
   }
   try {
     detectChangesInViewWhileDirty(lView);
@@ -11239,7 +11234,6 @@ function detectChangesInternal(lView, notifyErrorHandler = true) {
     if (!checkNoChangesMode) {
       rendererFactory.end?.();
       environment.inlineEffectRunner?.flush();
-      afterRenderEventManager?.end();
     }
   }
 }
@@ -11406,7 +11400,6 @@ function viewShouldHaveReactiveConsumer(tView) {
 }
 function detectChangesInEmbeddedViews(lView, mode) {
   for (let lContainer = getFirstLContainer(lView); lContainer !== null; lContainer = getNextLContainer(lContainer)) {
-    lContainer[FLAGS] &= ~LContainerFlags.HasChildViewsToRefresh;
     for (let i = CONTAINER_HEADER_OFFSET; i < lContainer.length; i++) {
       const embeddedLView = lContainer[i];
       detectChangesInViewIfAttached(embeddedLView, mode);
@@ -11869,11 +11862,11 @@ var ZoneAwareMicrotaskScheduler = class {
   }
 };
 var EffectHandle = class {
-  constructor(scheduler, effectFn, creationZone, destroyRef, errorHandler, allowSignalWrites) {
+  constructor(scheduler, effectFn, creationZone, destroyRef, injector, allowSignalWrites) {
     this.scheduler = scheduler;
     this.effectFn = effectFn;
     this.creationZone = creationZone;
-    this.errorHandler = errorHandler;
+    this.injector = injector;
     this.watcher = createWatch((onCleanup) => this.runEffect(onCleanup), () => this.schedule(), allowSignalWrites);
     this.unregisterOnDestroy = destroyRef?.onDestroy(() => this.destroy());
   }
@@ -11881,7 +11874,8 @@ var EffectHandle = class {
     try {
       this.effectFn(onCleanup);
     } catch (err) {
-      this.errorHandler?.handleError(err);
+      const errorHandler = this.injector.get(ErrorHandler, null, { optional: true });
+      errorHandler?.handleError(err);
     }
   }
   run() {
@@ -11899,9 +11893,8 @@ function effect(effectFn, options) {
   ngDevMode && assertNotInReactiveContext(effect, "Call `effect` outside of a reactive context. For example, schedule the effect inside the component constructor.");
   !options?.injector && assertInInjectionContext(effect);
   const injector = options?.injector ?? inject(Injector);
-  const errorHandler = injector.get(ErrorHandler, null, { optional: true });
   const destroyRef = options?.manualCleanup !== true ? injector.get(DestroyRef) : null;
-  const handle = new EffectHandle(injector.get(APP_EFFECT_SCHEDULER), effectFn, typeof Zone === "undefined" ? null : Zone.current, destroyRef, errorHandler, options?.allowSignalWrites ?? false);
+  const handle = new EffectHandle(injector.get(APP_EFFECT_SCHEDULER), effectFn, typeof Zone === "undefined" ? null : Zone.current, destroyRef, injector, options?.allowSignalWrites ?? false);
   const cdr = injector.get(ChangeDetectorRef, null, { optional: true });
   if (!cdr || !(cdr._lView[FLAGS] & 8)) {
     handle.watcher.notify();
@@ -12343,11 +12336,6 @@ var AfterRenderCallbackHandlerImpl = class {
     };
     this.deferredCallbacks = /* @__PURE__ */ new Set();
   }
-  validateBegin() {
-    if (this.executingCallbacks) {
-      throw new RuntimeError(102, ngDevMode && "A new render operation began before the previous operation ended. Did you trigger change detection from afterRender or afterNextRender?");
-    }
-  }
   register(callback) {
     const target = this.executingCallbacks ? this.deferredCallbacks : this.buckets[callback.phase];
     target.add(callback);
@@ -12357,9 +12345,11 @@ var AfterRenderCallbackHandlerImpl = class {
     this.deferredCallbacks.delete(callback);
   }
   execute() {
+    let callbacksExecuted = false;
     this.executingCallbacks = true;
     for (const bucket of Object.values(this.buckets)) {
       for (const callback of bucket) {
+        callbacksExecuted = true;
         callback.invoke();
       }
     }
@@ -12368,6 +12358,7 @@ var AfterRenderCallbackHandlerImpl = class {
       this.buckets[callback.phase].add(callback);
     }
     this.deferredCallbacks.clear();
+    return callbacksExecuted;
   }
   destroy() {
     for (const bucket of Object.values(this.buckets)) {
@@ -12378,32 +12369,20 @@ var AfterRenderCallbackHandlerImpl = class {
 };
 var _AfterRenderEventManager = class _AfterRenderEventManager {
   constructor() {
-    this.renderDepth = 0;
     this.handler = null;
     this.internalCallbacks = [];
   }
   /**
-   * Mark the beginning of a render operation (i.e. CD cycle).
-   * Throws if called while executing callbacks.
+   * Executes callbacks. Returns `true` if any callbacks executed.
    */
-  begin() {
-    this.handler?.validateBegin();
-    this.renderDepth++;
-  }
-  /**
-   * Mark the end of a render operation. Callbacks will be
-   * executed if there are no more pending operations.
-   */
-  end() {
-    ngDevMode && assertGreaterThan(this.renderDepth, 0, "renderDepth must be greater than 0");
-    this.renderDepth--;
-    if (this.renderDepth === 0) {
-      for (const callback of this.internalCallbacks) {
-        callback();
-      }
-      this.internalCallbacks.length = 0;
-      this.handler?.execute();
+  execute() {
+    const callbacks = [...this.internalCallbacks];
+    this.internalCallbacks.length = 0;
+    for (const callback of callbacks) {
+      callback();
     }
+    const handlerCallbacksExecuted = this.handler?.execute();
+    return !!handlerCallbacksExecuted || callbacks.length > 0;
   }
   ngOnDestroy() {
     this.handler?.destroy();
@@ -12763,7 +12742,7 @@ function createRootComponent(componentView, rootComponentDef, rootDirectives, ho
 }
 function setRootNodeAttributes(hostRenderer, componentDef, hostRNode, rootSelectorOrNode) {
   if (rootSelectorOrNode) {
-    setUpAttributes(hostRenderer, hostRNode, ["ng-version", "17.0.8"]);
+    setUpAttributes(hostRenderer, hostRNode, ["ng-version", "17.0.9"]);
   } else {
     const { attrs, classes } = extractAttrsAndClassesFromSelector(componentDef.selectors[0]);
     if (attrs) {
@@ -13355,8 +13334,8 @@ function insertTStylingBinding(tData, tNode, tStylingKeyWithStatic, index, isHos
   if (isKeyDuplicateOfStatic) {
     tData[index + 1] = setTStylingRangePrevDuplicate(tData[index + 1]);
   }
-  markDuplicates(tData, tStylingKey, index, true, isClassBinding);
-  markDuplicates(tData, tStylingKey, index, false, isClassBinding);
+  markDuplicates(tData, tStylingKey, index, true);
+  markDuplicates(tData, tStylingKey, index, false);
   markDuplicateOfResidualStyling(tNode, tStylingKey, tData, index, isClassBinding);
   tBindings = toTStylingRange(tmplHead, tmplTail);
   if (isClassBinding) {
@@ -13371,7 +13350,7 @@ function markDuplicateOfResidualStyling(tNode, tStylingKey, tData, index, isClas
     tData[index + 1] = setTStylingRangeNextDuplicate(tData[index + 1]);
   }
 }
-function markDuplicates(tData, tStylingKey, index, isPrevDir, isClassBinding) {
+function markDuplicates(tData, tStylingKey, index, isPrevDir) {
   const tStylingAtIndex = tData[index + 1];
   const isMap = tStylingKey === null;
   let cursor = isPrevDir ? getTStylingRangePrev(tStylingAtIndex) : getTStylingRangeNext(tStylingAtIndex);
@@ -14425,7 +14404,7 @@ function locateDehydratedViewsInContainer(currentRNode, serializedViews) {
   }
   return [currentRNode, dehydratedViews];
 }
-var _findMatchingDehydratedViewImpl = (lContainer, template) => null;
+var _findMatchingDehydratedViewImpl = () => null;
 function findMatchingDehydratedViewImpl(lContainer, template) {
   const views = lContainer[DEHYDRATED_VIEWS];
   if (!template || views === null || views.length === 0) {
@@ -14913,7 +14892,7 @@ function insertAnchorNode(hostLView, hostTNode) {
   return commentNode;
 }
 var _locateOrCreateAnchorNode = createAnchorNode;
-var _populateDehydratedViewsInLContainer = (lContainer, tNode, hostLView) => false;
+var _populateDehydratedViewsInLContainer = () => false;
 function populateDehydratedViewsInLContainer(lContainer, tNode, hostLView) {
   return _populateDehydratedViewsInLContainer(lContainer, tNode, hostLView);
 }
@@ -15367,7 +15346,6 @@ function onInteraction(trigger, callback) {
   if (!entry) {
     entry = new DeferEventEntry();
     interactionTriggers.set(trigger, entry);
-    ngDevMode && NgZone.assertInAngularZone();
     for (const name of interactionEventNames) {
       trigger.addEventListener(name, entry.listener, eventListenerOptions);
     }
@@ -15389,7 +15367,6 @@ function onHover(trigger, callback) {
   if (!entry) {
     entry = new DeferEventEntry();
     hoverTriggers.set(trigger, entry);
-    ngDevMode && NgZone.assertInAngularZone();
     for (const name of hoverEventNames) {
       trigger.addEventListener(name, entry.listener, eventListenerOptions);
     }
@@ -20407,7 +20384,7 @@ var Version = class {
     this.patch = parts.slice(2).join(".");
   }
 };
-var VERSION = new Version("17.0.8");
+var VERSION = new Version("17.0.9");
 var _Console = class _Console {
   log(message) {
     console.log(message);
@@ -20927,39 +20904,44 @@ function getModuleInjectorOfNodeInjector(injector) {
   return moduleInjector;
 }
 var GLOBAL_PUBLISH_EXPANDO_KEY = "ng";
+var globalUtilsFunctions = {
+  /**
+   * Warning: functions that start with `ɵ` are considered *INTERNAL* and should not be relied upon
+   * in application's code. The contract of those functions might be changed in any release and/or a
+   * function can be removed completely.
+   */
+  "ɵgetDependenciesFromInjectable": getDependenciesFromInjectable,
+  "ɵgetInjectorProviders": getInjectorProviders,
+  "ɵgetInjectorResolutionPath": getInjectorResolutionPath,
+  "ɵgetInjectorMetadata": getInjectorMetadata,
+  "ɵsetProfiler": setProfiler,
+  "getDirectiveMetadata": getDirectiveMetadata$1,
+  "getComponent": getComponent,
+  "getContext": getContext,
+  "getListeners": getListeners,
+  "getOwningComponent": getOwningComponent,
+  "getHostElement": getHostElement,
+  "getInjector": getInjector,
+  "getRootComponents": getRootComponents,
+  "getDirectives": getDirectives,
+  "applyChanges": applyChanges
+};
 var _published = false;
 function publishDefaultGlobalUtils$1() {
   if (!_published) {
     _published = true;
     setupFrameworkInjectorProfiler();
-    publishGlobalUtil("ɵgetDependenciesFromInjectable", getDependenciesFromInjectable);
-    publishGlobalUtil("ɵgetInjectorProviders", getInjectorProviders);
-    publishGlobalUtil("ɵgetInjectorResolutionPath", getInjectorResolutionPath);
-    publishGlobalUtil("ɵgetInjectorMetadata", getInjectorMetadata);
-    publishGlobalUtil("ɵsetProfiler", setProfiler);
-    publishGlobalUtil("getDirectiveMetadata", getDirectiveMetadata$1);
-    publishGlobalUtil("getComponent", getComponent);
-    publishGlobalUtil("getContext", getContext);
-    publishGlobalUtil("getListeners", getListeners);
-    publishGlobalUtil("getOwningComponent", getOwningComponent);
-    publishGlobalUtil("getHostElement", getHostElement);
-    publishGlobalUtil("getInjector", getInjector);
-    publishGlobalUtil("getRootComponents", getRootComponents);
-    publishGlobalUtil("getDirectives", getDirectives);
-    publishGlobalUtil("applyChanges", applyChanges);
+    for (const [methodName, method] of Object.entries(globalUtilsFunctions)) {
+      publishGlobalUtil(methodName, method);
+    }
   }
 }
 function publishGlobalUtil(name, fn) {
   if (typeof COMPILED === "undefined" || !COMPILED) {
     const w = _global;
     ngDevMode && assertDefined(fn, "function not defined");
-    if (w) {
-      let container = w[GLOBAL_PUBLISH_EXPANDO_KEY];
-      if (!container) {
-        container = w[GLOBAL_PUBLISH_EXPANDO_KEY] = {};
-      }
-      container[name] = fn;
-    }
+    w[GLOBAL_PUBLISH_EXPANDO_KEY] ??= {};
+    w[GLOBAL_PUBLISH_EXPANDO_KEY][name] = fn;
   }
 }
 var TESTABILITY = new InjectionToken("");
@@ -21341,6 +21323,7 @@ var _ApplicationRef = class _ApplicationRef {
     this._destroyListeners = [];
     this._views = [];
     this.internalErrorHandler = inject(INTERNAL_APPLICATION_ERROR_HANDLER);
+    this.afterRenderEffectManager = inject(AfterRenderEventManager);
     this.componentTypes = [];
     this.components = [];
     this.isStable = inject(PendingTasks).hasPendingTasks.pipe(map((pending) => !pending));
@@ -21401,8 +21384,8 @@ var _ApplicationRef = class _ApplicationRef {
     const initStatus = this._injector.get(ApplicationInitStatus);
     if (!initStatus.done) {
       const standalone = !isComponentFactory && isStandalone(componentOrFactory);
-      const errorMessage = "Cannot bootstrap as there are still asynchronous initializers running." + (standalone ? "" : " Bootstrap components in the `ngDoBootstrap` method of the root module.");
-      throw new RuntimeError(405, (typeof ngDevMode === "undefined" || ngDevMode) && errorMessage);
+      const errorMessage = (typeof ngDevMode === "undefined" || ngDevMode) && "Cannot bootstrap as there are still asynchronous initializers running." + (standalone ? "" : " Bootstrap components in the `ngDoBootstrap` method of the root module.");
+      throw new RuntimeError(405, errorMessage);
     }
     let componentFactory;
     if (isComponentFactory) {
@@ -21458,6 +21441,16 @@ var _ApplicationRef = class _ApplicationRef {
     } catch (e) {
       this.internalErrorHandler(e);
     } finally {
+      try {
+        const callbacksExecuted = this.afterRenderEffectManager.execute();
+        if ((typeof ngDevMode === "undefined" || ngDevMode) && callbacksExecuted) {
+          for (let view of this._views) {
+            view.checkNoChanges();
+          }
+        }
+      } catch (e) {
+        this.internalErrorHandler(e);
+      }
       this._runningTick = false;
     }
   }
@@ -22709,6 +22702,46 @@ function internalCreateApplication(config2) {
     return Promise.reject(e);
   }
 }
+var _ChangeDetectionSchedulerImpl = class _ChangeDetectionSchedulerImpl {
+  constructor() {
+    this.appRef = inject(ApplicationRef);
+    this.taskService = inject(PendingTasks);
+    this.pendingRenderTaskId = null;
+  }
+  notify() {
+    if (this.pendingRenderTaskId !== null)
+      return;
+    this.pendingRenderTaskId = this.taskService.add();
+    setTimeout(() => {
+      try {
+        if (!this.appRef.destroyed) {
+          this.appRef.tick();
+        }
+      } finally {
+        const taskId = this.pendingRenderTaskId;
+        this.pendingRenderTaskId = null;
+        this.taskService.remove(taskId);
+      }
+    });
+  }
+};
+_ChangeDetectionSchedulerImpl.ɵfac = function ChangeDetectionSchedulerImpl_Factory(t) {
+  return new (t || _ChangeDetectionSchedulerImpl)();
+};
+_ChangeDetectionSchedulerImpl.ɵprov = ɵɵdefineInjectable({ token: _ChangeDetectionSchedulerImpl, factory: _ChangeDetectionSchedulerImpl.ɵfac, providedIn: "root" });
+var ChangeDetectionSchedulerImpl = _ChangeDetectionSchedulerImpl;
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ChangeDetectionSchedulerImpl, [{
+    type: Injectable,
+    args: [{ providedIn: "root" }]
+  }], null, null);
+})();
+function provideZonelessChangeDetection() {
+  return makeEnvironmentProviders([
+    { provide: ChangeDetectionScheduler, useExisting: ChangeDetectionSchedulerImpl },
+    { provide: NgZone, useClass: NoopNgZone }
+  ]);
+}
 function getDeferBlocks(lView, deferBlocks) {
   const tView = lView[TVIEW];
   for (let i = HEADER_OFFSET; i < tView.bindingStartIndex; i++) {
@@ -23613,8 +23646,6 @@ export {
   COMPILER_OPTIONS,
   CompilerFactory,
   PendingTasks,
-  publishDefaultGlobalUtils$1,
-  publishGlobalUtil,
   TESTABILITY,
   TESTABILITY_GETTER,
   Testability,
@@ -23656,6 +23687,7 @@ export {
   ApplicationModule,
   setAlternateWeakRefImpl,
   internalCreateApplication,
+  provideZonelessChangeDetection,
   getDeferBlocks,
   annotateForHydration,
   withDomHydration,
@@ -23677,14 +23709,14 @@ export {
 
 @angular/core/fesm2022/primitives/signals.mjs:
   (**
-   * @license Angular v17.0.8
+   * @license Angular v17.0.9
    * (c) 2010-2022 Google LLC. https://angular.io/
    * License: MIT
    *)
 
 @angular/core/fesm2022/core.mjs:
   (**
-   * @license Angular v17.0.8
+   * @license Angular v17.0.9
    * (c) 2010-2022 Google LLC. https://angular.io/
    * License: MIT
    *)
@@ -23698,4 +23730,4 @@ export {
    * found in the LICENSE file at https://angular.io/license
    *)
 */
-//# sourceMappingURL=chunk-KOXGXC6M.js.map
+//# sourceMappingURL=chunk-PUBBWM4G.js.map

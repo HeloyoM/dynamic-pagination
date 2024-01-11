@@ -1,6 +1,6 @@
 import {
   Title
-} from "./chunk-EJZUQ4WJ.js";
+} from "./chunk-GMC7OSEY.js";
 import {
   DOCUMENT,
   HashLocationStrategy,
@@ -9,7 +9,7 @@ import {
   LocationStrategy,
   PathLocationStrategy,
   ViewportScroller
-} from "./chunk-2LUOTJJP.js";
+} from "./chunk-MWHXB3RO.js";
 import {
   APP_BOOTSTRAP_LISTENER,
   APP_INITIALIZER,
@@ -111,9 +111,9 @@ import {
   ɵɵloadQuery,
   ɵɵqueryRefresh,
   ɵɵsanitizeUrlOrResourceUrl
-} from "./chunk-KOXGXC6M.js";
+} from "./chunk-PUBBWM4G.js";
 
-// node_modules/@angular/router/fesm2022/router.mjs
+// ../node_modules/@angular/router/fesm2022/router.mjs
 var PRIMARY_OUTLET = "primary";
 var RouteTitleKey = Symbol("RouteTitle");
 var ParamsAsMap = class {
@@ -205,9 +205,6 @@ function equalArraysOrString(a, b) {
   } else {
     return a === b;
   }
-}
-function last2(a) {
-  return a.length > 0 ? a[a.length - 1] : null;
 }
 function wrapIntoObservable(value) {
   if (isObservable(value)) {
@@ -461,13 +458,12 @@ function serializePath(path) {
   return `${encodeUriSegment(path.path)}${serializeMatrixParams(path.parameters)}`;
 }
 function serializeMatrixParams(params) {
-  return Object.keys(params).map((key) => `;${encodeUriSegment(key)}=${encodeUriSegment(params[key])}`).join("");
+  return Object.entries(params).map(([key, value]) => `;${encodeUriSegment(key)}=${encodeUriSegment(value)}`).join("");
 }
 function serializeQueryParams(params) {
-  const strParams = Object.keys(params).map((name) => {
-    const value = params[name];
+  const strParams = Object.entries(params).map(([name, value]) => {
     return Array.isArray(value) ? value.map((v) => `${encodeUriQuery(name)}=${encodeUriQuery(v)}`).join("&") : `${encodeUriQuery(name)}=${encodeUriQuery(value)}`;
-  }).filter((s) => !!s);
+  }).filter((s) => s);
   return strParams.length ? `?${strParams.join("&")}` : "";
 }
 var SEGMENT_RE = /^[^\/()?;#]+/;
@@ -650,8 +646,7 @@ function createRoot(rootCandidate) {
 }
 function squashSegmentGroup(segmentGroup) {
   const newChildren = {};
-  for (const childOutlet of Object.keys(segmentGroup.children)) {
-    const child = segmentGroup.children[childOutlet];
+  for (const [childOutlet, child] of Object.entries(segmentGroup.children)) {
     const childCandidate = squashSegmentGroup(child);
     if (childOutlet === PRIMARY_OUTLET && childCandidate.segments.length === 0 && childCandidate.hasChildren()) {
       for (const [grandChildOutlet, grandChild] of Object.entries(childCandidate.children)) {
@@ -754,7 +749,7 @@ var Navigation = class {
       throw new RuntimeError(4003, (typeof ngDevMode === "undefined" || ngDevMode) && "Root segment cannot have matrix parameters");
     }
     const cmdWithOutlet = commands.find(isCommandWithOutlets);
-    if (cmdWithOutlet && cmdWithOutlet !== last2(commands)) {
+    if (cmdWithOutlet && cmdWithOutlet !== commands.at(-1)) {
       throw new RuntimeError(4004, (typeof ngDevMode === "undefined" || ngDevMode) && "{outlets:{}} has to be the last command");
     }
   }
@@ -1380,8 +1375,8 @@ var RouterState = class extends Tree {
     return this.snapshot.toString();
   }
 };
-function createEmptyState(urlTree, rootComponent) {
-  const snapshot = createEmptyStateSnapshot(urlTree, rootComponent);
+function createEmptyState(rootComponent) {
+  const snapshot = createEmptyStateSnapshot(rootComponent);
   const emptyUrl = new BehaviorSubject([new UrlSegment("", {})]);
   const emptyParams = new BehaviorSubject({});
   const emptyData = new BehaviorSubject({});
@@ -1391,7 +1386,7 @@ function createEmptyState(urlTree, rootComponent) {
   activated.snapshot = snapshot.root;
   return new RouterState(new TreeNode(activated, []), snapshot);
 }
-function createEmptyStateSnapshot(urlTree, rootComponent) {
+function createEmptyStateSnapshot(rootComponent) {
   const emptyParams = {};
   const emptyData = {};
   const emptyQueryParams = {};
@@ -2150,8 +2145,8 @@ var ActivateRoutes = class {
     const context = parentContexts.getContext(route.value.outlet);
     const contexts = context && route.value.component ? context.children : parentContexts;
     const children = nodeChildrenAsMap(route);
-    for (const childOutlet of Object.keys(children)) {
-      this.deactivateRouteAndItsChildren(children[childOutlet], contexts);
+    for (const treeNode of Object.values(children)) {
+      this.deactivateRouteAndItsChildren(treeNode, contexts);
     }
     if (context && context.outlet) {
       const componentRef = context.outlet.detach();
@@ -2167,8 +2162,8 @@ var ActivateRoutes = class {
     const context = parentContexts.getContext(route.value.outlet);
     const contexts = context && route.value.component ? context.children : parentContexts;
     const children = nodeChildrenAsMap(route);
-    for (const childOutlet of Object.keys(children)) {
-      this.deactivateRouteAndItsChildren(children[childOutlet], contexts);
+    for (const treeNode of Object.values(children)) {
+      this.deactivateRouteAndItsChildren(treeNode, contexts);
     }
     if (context) {
       if (context.outlet) {
@@ -2669,7 +2664,7 @@ function match(segmentGroup, route, segments) {
 function createWildcardMatchResult(segments) {
   return {
     matched: true,
-    parameters: segments.length > 0 ? last2(segments).parameters : {},
+    parameters: segments.at(-1)?.parameters ?? {},
     consumedSegments: segments,
     remainingSegments: [],
     positionalParamSegments: {}
@@ -2684,7 +2679,7 @@ function split(segmentGroup, consumedSegments, slicedSegments, config) {
     };
   }
   if (slicedSegments.length === 0 && containsEmptyPathMatches(segmentGroup, slicedSegments, config)) {
-    const s2 = new UrlSegmentGroup(segmentGroup.segments, addEmptyPathsToChildrenIfNeeded(segmentGroup, consumedSegments, slicedSegments, config, segmentGroup.children));
+    const s2 = new UrlSegmentGroup(segmentGroup.segments, addEmptyPathsToChildrenIfNeeded(segmentGroup, slicedSegments, config, segmentGroup.children));
     return {
       segmentGroup: s2,
       slicedSegments
@@ -2696,7 +2691,7 @@ function split(segmentGroup, consumedSegments, slicedSegments, config) {
     slicedSegments
   };
 }
-function addEmptyPathsToChildrenIfNeeded(segmentGroup, consumedSegments, slicedSegments, routes, children) {
+function addEmptyPathsToChildrenIfNeeded(segmentGroup, slicedSegments, routes, children) {
   const res = {};
   for (const r of routes) {
     if (emptyPathMatch(segmentGroup, slicedSegments, r) && !children[getOutlet(r)]) {
@@ -3511,7 +3506,7 @@ var _NavigationTransitions = class _NavigationTransitions {
               } = t;
               const navStart = new NavigationStart(id, this.urlSerializer.serialize(extractedUrl), source, restoredState);
               this.events.next(navStart);
-              const targetSnapshot = createEmptyState(extractedUrl, this.rootComponentType).snapshot;
+              const targetSnapshot = createEmptyState(this.rootComponentType).snapshot;
               this.currentTransition = overallTransitionState = __spreadProps(__spreadValues({}, t), {
                 targetSnapshot,
                 urlAfterRedirects: extractedUrl,
@@ -3844,7 +3839,7 @@ var _HistoryStateManager = class _HistoryStateManager extends StateManager {
     this.rawUrlTree = this.currentUrlTree;
     this.currentPageId = 0;
     this.lastSuccessfulId = -1;
-    this.routerState = createEmptyState(this.currentUrlTree, null);
+    this.routerState = createEmptyState(null);
     this.stateMemento = this.createStateMemento();
   }
   getCurrentUrlTree() {
@@ -4397,8 +4392,7 @@ var _Router = class _Router {
     return containsTree(this.currentUrlTree, urlTree, options);
   }
   removeEmptyProps(params) {
-    return Object.keys(params).reduce((result, key) => {
-      const value = params[key];
+    return Object.entries(params).reduce((result, [key, value]) => {
       if (value !== null && value !== void 0) {
         result[key] = value;
       }
@@ -5498,7 +5492,7 @@ function mapToCanDeactivate(providers) {
 function mapToResolve(provider) {
   return (...params) => inject(provider).resolve(...params);
 }
-var VERSION = new Version("17.0.8");
+var VERSION = new Version("17.0.9");
 export {
   ActivatedRoute,
   ActivatedRouteSnapshot,
@@ -5578,7 +5572,7 @@ export {
 
 @angular/router/fesm2022/router.mjs:
   (**
-   * @license Angular v17.0.8
+   * @license Angular v17.0.9
    * (c) 2010-2022 Google LLC. https://angular.io/
    * License: MIT
    *)
