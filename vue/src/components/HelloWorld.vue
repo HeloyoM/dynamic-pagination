@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import Main from '../utiles/main'
+import Main from '../../../main'
 
 
 export default {
